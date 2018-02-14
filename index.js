@@ -36,6 +36,10 @@ const stopJob = async (credentials) => {
 };
 
 login().then(stopJob).catch(error => {
-    console.log(error);
-    process.exit(1)
+    if (error.body.code === 'ResourceNotFound') {
+        console.log('no stream analytics job found with name: ' + process.env.name + ' skipping.')
+    } else {
+        console.log(error);
+        process.exit(1)
+    }
 });
