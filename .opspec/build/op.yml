@@ -1,0 +1,22 @@
+name: build
+description: builds the package
+inputs:
+  version:
+    string:
+      constraints: { format: semver }
+      default: 0.0.0
+  pkg:
+    dir:
+      default: .
+  dockerfile:
+    file:
+      default: /Dockerfile
+run:
+  serial:
+    - op:
+        pkg: { ref: test }
+        inputs: { pkg }
+    - op:
+        pkg: { ref: github.com/opspec-pkgs/docker.image.build#2.0.0 }
+        inputs: { dockerfile, imageName: 'opspecpkgs/azure.streamanalytics.job.stop:$(version)' }
+        outputs: { imageTar }

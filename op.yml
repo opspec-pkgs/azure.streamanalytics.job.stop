@@ -1,0 +1,47 @@
+name: github.com/opspec-pkgs/azure.streamanalytics.job.stop
+description: stops an azure stream analytics job
+inputs:
+  subscriptionId:
+    string:
+      constraints: { minLength: 1 }
+      description: id of azure subscription
+  loginId:
+    string:
+      constraints: { minLength: 1 }
+      description: id of user, service principal, or app to login with
+  loginSecret:
+    string:
+      constraints: { minLength: 1 }
+      description: secret of user, service principal, or app to login with
+      isSecret: true
+  loginTenantId:
+    string:
+      constraints: { minLength: 1 }
+      description: tenant id of user, service principal, or app to login with
+  resourceGroup:
+    string:
+      constraints: { minLength: 1 }
+      description: name of azure resource group
+  name:
+    string:
+      constraints: { minLength: 1 }
+      description: name of the stream analytics job
+  loginType:
+    string:
+      constraints: { enum: [user, sp]}
+      description: type of login; 'user' (default) or 'sp' for service principal
+      default: user
+version: 1.0.0
+run:
+  container:
+    image: { ref: 'opspecpkgs/azure.streamanalytics.job.stop:1.0.0' }
+    cmd: [node, /index.js]
+    files: { /index.js }
+    envVars:
+      subscriptionId:
+      loginId:
+      loginSecret:
+      loginTenantId:
+      resourceGroup:
+      name:
+      loginType:
