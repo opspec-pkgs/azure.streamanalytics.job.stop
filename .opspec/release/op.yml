@@ -41,17 +41,17 @@ run:
           imageName: 'opspecpkgs/azure.streamanalytics.job.stop:$(version)'
           username: $(dockerUsername)
           password: $(dockerPassword)
-    # - op:
-    #     pkg: { ref: github.com/opspec-pkgs/git.repo.resolve-commit#1.0.1 }
-    #     inputs: { dotGitDir: $(pkg)/.git }
-    #     outputs: { commit: }
-    # - op:
-    #     pkg: { ref: github.com/opspec-pkgs/github.release.create#1.0.0 }
-    #     inputs:
-    #       owner: opspec-pkgs
-    #       repo: azure.streamanalytics.job.stop
-    #       loginUsername: $(githubUsername)
-    #       loginPassword: $(githubPassword)
-    #       tag: $(version)
-    #       commitish: $(commit)
-    #       name: $(version)
+    - op:
+        pkg: { ref: github.com/opspec-pkgs/git.repo.resolve-commit#1.0.1 }
+        inputs: { dotGitDir: $(pkg)/.git }
+        outputs: { commit: }
+    - op:
+        pkg: { ref: github.com/opspec-pkgs/github.release.create#1.0.0 }
+        inputs:
+          owner: opspec-pkgs
+          repo: azure.streamanalytics.job.stop
+          loginUsername: $(githubUsername)
+          loginPassword: $(githubPassword)
+          tag: $(version)
+          commitish: $(commit)
+          name: $(version)
