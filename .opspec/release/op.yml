@@ -25,6 +25,9 @@ inputs:
   pkg:
     dir:
       default: .
+outputs:
+  pkg:
+    dir: {}
 run:
   serial:
     - op:
@@ -34,6 +37,7 @@ run:
           pkg:
         outputs:
           imageTar:
+          pkg:
     - op:
         pkg: { ref: github.com/opspec-pkgs/docker.image.push#2.0.0 }
         inputs:
@@ -42,8 +46,8 @@ run:
           username: $(dockerUsername)
           password: $(dockerPassword)
     - op:
-        pkg: { ref: github.com/opspec-pkgs/git.repo.resolve-commit#1.0.1 }
-        inputs: { dotGitDir: $(pkg)/.git }
+        pkg: { ref: github.com/opspec-pkgs/git.repo.resolve-commit#1.0.0 }
+        inputs: { dotGitDir: $(pkg/.git) }
         outputs: { commit: }
     - op:
         pkg: { ref: github.com/opspec-pkgs/github.release.create#1.0.0 }
