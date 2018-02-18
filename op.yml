@@ -1,5 +1,6 @@
 name: github.com/opspec-pkgs/azure.streamanalytics.job.stop
 description: stops an azure stream analytics job
+icon: /icon.svg
 inputs:
   subscriptionId:
     string:
@@ -31,7 +32,7 @@ inputs:
       constraints: { enum: [user, sp]}
       description: type of login; 'user' (default) or 'sp' for service principal
       default: user
-version: 1.0.0
+version: 1.0.1
 run:
   container:
     image: { ref: 'opspecpkgs/azure.streamanalytics.job.stop:1.0.0' }
