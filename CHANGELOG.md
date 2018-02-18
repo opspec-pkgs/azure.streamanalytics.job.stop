@@ -5,5 +5,10 @@ All notable changes will be documented in this file in accordance with
 
 ## \[Unreleased]
 
+## \[1.0.1] - 2018-02-18
+
+### Added
+- icon
+
 ## \[1.0.0] - 2018-02-13
 
