@@ -1,6 +1,5 @@
 name: github.com/opspec-pkgs/azure.streamanalytics.job.stop
 description: stops an azure stream analytics job
-icon: /icon.svg
 inputs:
   subscriptionId:
     string:

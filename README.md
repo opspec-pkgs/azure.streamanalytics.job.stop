@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/opspec-pkgs/azure.streamanalytics.job.stop.svg?branch=master)](https://travis-ci.org/opspec-pkgs/azure.streamanalytics.job.stop)
 
+<img src="icon.svg" alt="icon" height="100px">
+
 # Problem statement
 
 stops an azure stream analytics job
@@ -10,34 +12,32 @@ this version of the pkg is in [![opspec 0.1.5](https://img.shields.io/badge/opsp
 
 # Example usage
 
-## install
+## Install
 
 ```shell
 opctl pkg install github.com/opspec-pkgs/azure.streamanalytics.job.stop#1.0.1
 ```
 
-## run
+## Run
 
 ```
 opctl run github.com/opspec-pkgs/azure.streamanalytics.job.stop#1.0.1
 ```
 
-## compose
+## Compose
 
 ```yaml
 op:
   pkg: { ref: github.com/opspec-pkgs/azure.streamanalytics.job.stop#1.0.1 }
   inputs:
+    subscriptionId:
     loginId:
     loginSecret:
     loginTenantId:
-    name:
     resourceGroup:
-    subscriptionId:
-    # begin optional params
+    name:
+    # params w/ default
     loginType:
-    # end optional params
-  outputs:
 ```
 
 # Support
