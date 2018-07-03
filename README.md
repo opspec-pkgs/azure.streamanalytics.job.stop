@@ -8,14 +8,14 @@ stops an azure stream analytics job
 
 # Format
 
-this version of the pkg is in [![opspec 0.1.5](https://img.shields.io/badge/opspec-0.1.5-brightgreen.svg?colorA=6b6b6b&colorB=fc16be)](https://opspec.io/0.1.5/packages.html) format
+the op uses [![opspec 0.1.5](https://img.shields.io/badge/opspec-0.1.5-brightgreen.svg?colorA=6b6b6b&colorB=fc16be)](https://opspec.io/0.1.5) definition format
 
 # Example usage
 
 ## Install
 
 ```shell
-opctl pkg install github.com/opspec-pkgs/azure.streamanalytics.job.stop#1.1.0
+opctl op install github.com/opspec-pkgs/azure.streamanalytics.job.stop#1.1.0
 ```
 
 ## Run
@@ -28,14 +28,14 @@ opctl run github.com/opspec-pkgs/azure.streamanalytics.job.stop#1.1.0
 
 ```yaml
 op:
-  pkg: { ref: github.com/opspec-pkgs/azure.streamanalytics.job.stop#1.1.0 }
+  ref: github.com/opspec-pkgs/azure.streamanalytics.job.stop#1.1.0
   inputs:
-    subscriptionId:
     loginId:
     loginSecret:
     loginTenantId:
-    resourceGroup:
     name:
+    resourceGroup:
+    subscriptionId:
     # params w/ default
     loginType:
 ```
@@ -43,7 +43,7 @@ op:
 # Support
 
 join us on
-[![Slack](https://opspec-slackin.herokuapp.com/badge.svg)](https://opspec-slackin.herokuapp.com/)
+[![Slack](https://opctl-slackin.herokuapp.com/badge.svg)](https://opctl-slackin.herokuapp.com/)
 or
 [open an issue](https://github.com/opspec-pkgs/azure.streamanalytics.job.stop/issues)
 
