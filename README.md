@@ -1,4 +1,5 @@
-[![Build Status](https://github.com/opspec-pkgs/azure.streamanalytics.job.stop/workflows/build/badge.svg?branch=main)](https://github.com/opspec-pkgs/azure.streamanalytics.job.stop/actions?query=workflow%3Abuild+branch%3Amain)
+[![build](https://github.com/opspec-pkgs/azure.streamanalytics.job.stop/actions/workflows/build.yml/badge.svg)](https://github.com/opspec-pkgs/azure.streamanalytics.job.stop/actions/workflows/build.yml)
+
 
 <img src="icon.svg" alt="icon" height="100px">
 
